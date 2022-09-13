@@ -28,6 +28,8 @@ public class User {
     private String fullName;
 
     @Column
+    private String avatar;
+    @Column
     private String address;
 
     @Column
@@ -35,6 +37,14 @@ public class User {
 
     @Column
     private String gender;
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
 
     @Column
     @JsonFormat(pattern="dd-MM-yyyy")
@@ -175,12 +185,13 @@ public class User {
         this.speciality = speciality;
     }
 
-    public User(Long id, String role, String email, String password, String fullName, String address, String phoneNumber, String gender, Date dateOfBirth, String allergies, String diseases, String medication, String bio, String speciality) {
+    public User(Long id, String role, String email, String password, String fullName, String avatar, String address, String phoneNumber, String gender, Date dateOfBirth, String allergies, String diseases, String medication, String bio, String speciality) {
         this.id = id;
         this.role = role;
         this.email = email;
         this.password = password;
         this.fullName = fullName;
+        this.avatar = avatar;
         this.address = address;
         this.phoneNumber = phoneNumber;
         this.gender = gender;
@@ -201,6 +212,7 @@ public class User {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", fullName='" + fullName + '\'' +
+                ", avatar='" + avatar + '\'' +
                 ", address='" + address + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", gender='" + gender + '\'' +

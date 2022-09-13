@@ -17,6 +17,7 @@ public class User {
     private String role;
 
 
+
     @Column(nullable = false, unique = true, length = 45)
     private String email;
 
@@ -57,8 +58,13 @@ public class User {
     @Column
     private String speciality;
 
+
+
     public Long getId() {
         return id;
+    }
+
+    public User() {
     }
 
     public void setId(Long id) {
@@ -169,6 +175,24 @@ public class User {
         this.speciality = speciality;
     }
 
+    public User(Long id, String role, String email, String password, String fullName, String address, String phoneNumber, String gender, Date dateOfBirth, String allergies, String diseases, String medication, String bio, String speciality) {
+        this.id = id;
+        this.role = role;
+        this.email = email;
+        this.password = password;
+        this.fullName = fullName;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
+        this.allergies = allergies;
+        this.diseases = diseases;
+        this.medication = medication;
+        this.bio = bio;
+        this.speciality = speciality;
+
+    }
+
     @Override
     public String toString() {
         return "User{" +
@@ -189,3 +213,4 @@ public class User {
                 '}';
     }
 }
+

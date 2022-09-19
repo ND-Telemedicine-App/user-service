@@ -23,6 +23,11 @@ public class UserController {
         return userService.findAllDoctors();
     }
 
+    @GetMapping(value = "/users")
+    public List<User> getAllUsers(){
+        return userService.findAll();
+    }
+
     @PostMapping(value = "/createUser")
     public User createUser(@RequestBody User newUser){
         return userService.saveUser(newUser);

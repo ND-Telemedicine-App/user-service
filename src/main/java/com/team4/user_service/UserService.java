@@ -24,4 +24,6 @@ public class UserService {
         return userRepository.findUsersByRoleEquals("DOCTOR");
     }
 
+    public List<User> findAll() {return userRepository.findAll();}
+
 }

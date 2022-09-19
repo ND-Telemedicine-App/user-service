@@ -14,6 +14,15 @@ public class BusyTime {
     @Column
     private String busyTime;
 
+    public BusyTime() {
+    }
+
+    public BusyTime(Long id, Long doctorId, String busyTime) {
+        this.id = id;
+        this.doctorId = doctorId;
+        this.busyTime = busyTime;
+    }
+
     public Long getId() {
         return id;
     }

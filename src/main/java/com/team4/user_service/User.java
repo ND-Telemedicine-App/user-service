@@ -201,7 +201,6 @@ public class User {
         this.medication = medication;
         this.bio = bio;
         this.speciality = speciality;
-
     }
 
     @Override

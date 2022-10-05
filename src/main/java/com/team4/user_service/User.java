@@ -16,8 +16,6 @@ public class User {
     @Column
     private String role;
 
-
-
     @Column(nullable = false, unique = true, length = 45)
     private String email;
 

@@ -24,7 +24,9 @@ public class UserService {
         return userRepository.findUsersByRoleEquals("DOCTOR");
     }
 
-    public List<User> findAllPatients(){ return userRepository.findUsersByRoleEquals("PATIENT"); }
+    public List<User> findAllPatients(){
+        return userRepository.findUsersByRoleEquals("PATIENT");
+    }
 
     public List<User> findAll() {return userRepository.findAll();}
 

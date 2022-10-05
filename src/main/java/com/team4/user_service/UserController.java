@@ -23,6 +23,11 @@ public class UserController {
         return userService.findAllDoctors();
     }
 
+    @GetMapping(value = "/user/patients")
+    public List<User> getAllPatients(){
+        return userService.findAllPatients();
+    }
+
     @GetMapping(value = "/users")
     public List<User> getAllUsers(){
         return userService.findAll();

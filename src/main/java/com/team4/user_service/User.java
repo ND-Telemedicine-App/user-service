@@ -14,12 +14,6 @@ public class User {
     private Long id;
 
     @Column
-    private Long patientId;
-
-    @Column
-    private Long doctorId;
-
-    @Column
     private String role;
 
     @Column(nullable = false, unique = true, length = 45)
@@ -84,14 +78,6 @@ public class User {
     public void setId(Long id) {
         this.id = id;
     }
-
-    public Long getPatientId() { return patientId;}
-
-    public void setPatientId(Long patientId) { this.patientId = patientId; }
-
-    public Long getDoctorId(){return doctorId;}
-
-    public void setDoctorId(Long doctorId) { this.doctorId = doctorId; }
 
     public String getRole() {
         return role;
@@ -197,10 +183,8 @@ public class User {
         this.speciality = speciality;
     }
 
-    public User(Long id, Long patientId, Long doctorId, String role, String email, String password, String fullName, String avatar, String address, String phoneNumber, String gender, Date dateOfBirth, String allergies, String diseases, String medication, String bio, String speciality) {
+    public User(Long id, String role, String email, String password, String fullName, String avatar, String address, String phoneNumber, String gender, Date dateOfBirth, String allergies, String diseases, String medication, String bio, String speciality) {
         this.id = id;
-        this.patientId = patientId;
-        this.doctorId = doctorId;
         this.role = role;
         this.email = email;
         this.password = password;
@@ -222,8 +206,6 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                "patientId=" + patientId + '\'' +
-                "doctorId=" + doctorId + '\'' +
                 ", role='" + role + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +

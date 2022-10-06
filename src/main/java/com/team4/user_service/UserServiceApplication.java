@@ -31,10 +31,10 @@ public class UserServiceApplication implements CommandLineRunner {
 		User newUser3 = new User(4L , "PATIENT", "junho@gmail.com", "password", "Go Junho", "assets/images/Junho.png", "224 Elizabeth Street", "0123456789", "Male", new Date(99, 12,30), "Peanut","Heart disease, diabetes level 2","Insulin, Paracetamol",
 				"", "", "Frequent headaches");
 
-		BusyTime busyTime1 = new BusyTime(1L, 2L, "26-09-2022 10:30", 2);
-		BusyTime busyTime2 = new BusyTime(2L, 2L, "01-10-2022 12:11", 3);
-		BusyTime busyTime3 = new BusyTime(3L, 2L, "29-09-2022 14:02", 4);
-		BusyTime busyTime4 = new BusyTime(4L, 2L, "28-09-2022 9:25", 5);
+		BusyTime busyTime1 = new BusyTime(1L, 2L, "26-10-2022 10:30", 2);
+		BusyTime busyTime2 = new BusyTime(2L, 2L, "08-10-2022 12:11", 1);
+		BusyTime busyTime3 = new BusyTime(3L, 2L, "29-10-2022 14:02", 1);
+		BusyTime busyTime4 = new BusyTime(4L, 2L, "28-10-2022 9:25", 2);
 
 
 

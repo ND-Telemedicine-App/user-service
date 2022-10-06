@@ -23,6 +23,11 @@ public class UserController {
         return userService.findAllDoctors();
     }
 
+    @GetMapping(value = "/user/patients")
+    public List<User> getAllPatients(){
+        return userService.findAllPatients();
+    }
+
     @GetMapping(value = "/users")
     public List<User> getAllUsers(){
         return userService.findAll();
@@ -31,5 +36,11 @@ public class UserController {
     @PostMapping(value = "/createUser")
     public User createUser(@RequestBody User newUser){
         return userService.saveUser(newUser);
+    }
+
+    //updates the user's status via searching their user id first
+    @PutMapping(value = "/user/update-status/{id}")
+    public User updateUser(@PathVariable Long id, @RequestBody String userStatus){
+        return userService.updateUserStatus(id, userStatus);
     }
 }

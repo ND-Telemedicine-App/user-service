@@ -16,8 +16,6 @@ public class User {
     @Column
     private String role;
 
-
-
     @Column(nullable = false, unique = true, length = 45)
     private String email;
 
@@ -67,6 +65,9 @@ public class User {
 
     @Column
     private String speciality;
+
+    @Column
+    private String userStatus;
 
 
 
@@ -185,6 +186,33 @@ public class User {
         this.speciality = speciality;
     }
 
+    public String getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(String userStatus) {
+        this.userStatus = userStatus;
+    }
+
+    public User(Long id, String role, String email, String password, String fullName, String avatar, String address, String phoneNumber, String gender, Date dateOfBirth, String allergies, String diseases, String medication, String bio, String speciality, String userStatus) {
+        this.id = id;
+        this.role = role;
+        this.email = email;
+        this.password = password;
+        this.fullName = fullName;
+        this.avatar = avatar;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+        this.gender = gender;
+        this.dateOfBirth = dateOfBirth;
+        this.allergies = allergies;
+        this.diseases = diseases;
+        this.medication = medication;
+        this.bio = bio;
+        this.speciality = speciality;
+        this.userStatus = userStatus;
+    }
+
     public User(Long id, String role, String email, String password, String fullName, String avatar, String address, String phoneNumber, String gender, Date dateOfBirth, String allergies, String diseases, String medication, String bio, String speciality) {
         this.id = id;
         this.role = role;
@@ -222,7 +250,9 @@ public class User {
                 ", medication='" + medication + '\'' +
                 ", bio='" + bio + '\'' +
                 ", speciality='" + speciality + '\'' +
+                ", userStatus='" + userStatus + '\'' +
                 '}';
+
     }
 }
 

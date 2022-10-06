@@ -42,7 +42,7 @@ public class UserServiceApplication implements CommandLineRunner {
 		userRepository.save(newUser1);
 		userRepository.save(newUser2);
 		userRepository.save(newUser3);
-		newUser1.setUserStatus("Now online");
+		newUser1.setUserStatus("Online 2");
 		userRepository.save(newUser1);
 
 		busyTimeRepository.save(busyTime1);

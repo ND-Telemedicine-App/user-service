@@ -22,14 +22,14 @@ public class UserServiceApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception
 	{
-		User newUser = new User(1L ,"DOCTOR", "doctor123@gmail.com", "password", "John Dang", "assets/images/doctor_ava_1.jpeg", "123 Abc Street", "0123456789", "Male", new Date(76, 12,21), "","","",
-		"Dr John has over 14 years experience as a GP.", "Surgery");
-		User newUser1 = new User(2L ,"DOCTOR", "doctor456@gmail.com", "password", "Alicia Nguyen", "assets/images/doctor_ava_2.jpeg", "123 Abc Street", "0123456789", "Female", new Date(76, 12,21), "","","",
-				"Dr Alicia has over 14 years experience as a Ophthalmologists.", "Ophthalmologists" );
-		User newUser2 = new User(3L , "DOCTOR", "doctor789@gmail.com", "password", "Ben Tran", "assets/images/doctor_ava_3.jpeg", "123 Abc Street", "0123456789", "Male", new Date(76, 12,21), "","","",
-				"Dr John has over 14 years experience as a Radiologists", "Radiologists");
-		User newUser3 = new User(4L , "PATIENT", "luke@gmail.com", "password", "Luke Nguyen", "assets/images/patient.jpeg", "123 Elizabeth St, Melbourne, VIC 3000", "0413939449", "Male", new Date(76, 12,21), "Peanut Butter, Aspirin, Dairy, Penicillin, Tree nuts","Major depression, Diabetes type 2","Citalopram, Insulin",
-				"", "");
+		User newUser = new User(1L , "DOCTOR", "doctor123@gmail.com", "password", "John Dang", "assets/images/doctor_ava_1.jpeg", "123 Abc Street", "0123456789", "Male", new Date(76, 12,21), "","","",
+				"Dr John has over 14 years’ experience as a GP.", "Surgery", "No status");
+		User newUser1 = new User(2L , "DOCTOR", "doctor456@gmail.com", "password", "Alicia Nguyen", "assets/images/doctor_ava_2.jpeg", "123 Abc Street", "0123456789", "Female", new Date(76, 12,21), "","","",
+				"Dr Alicia has over 14 years’ experience as a Ophthalmologists.", "Ophthalmologists", "No status" );
+		User newUser2 = new User(3L , "PATIENT", "doctor789@gmail.com", "password", "Ben Tran", "assets/images/kieran.jpg", "123 Abc Street", "0123456789", "Male", new Date(76, 12,21), "Nuts","Migraine","Aspirin",
+				"", "", "Feeling sick");
+		User newUser3 = new User(4L , "PATIENT", "junho@gmail.com", "password", "Go Junho", "assets/images/Junho.png", "224 Elizabeth Street", "0123456789", "Male", new Date(99, 12,30), "Peanut","Heart disease, diabetes level 2","Insulin, Paracetamol",
+				"", "", "Frequent headaches");
 
 		BusyTime busyTime1 = new BusyTime(1L, 2L, "26-09-2022 10:30", 2);
 		BusyTime busyTime2 = new BusyTime(2L, 2L, "01-10-2022 12:11", 3);
@@ -42,6 +42,8 @@ public class UserServiceApplication implements CommandLineRunner {
 		userRepository.save(newUser1);
 		userRepository.save(newUser2);
 		userRepository.save(newUser3);
+		newUser1.setUserStatus("Online 2");
+		userRepository.save(newUser1);
 
 		busyTimeRepository.save(busyTime1);
 		busyTimeRepository.save(busyTime2);

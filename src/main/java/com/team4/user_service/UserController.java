@@ -37,4 +37,10 @@ public class UserController {
     public User createUser(@RequestBody User newUser){
         return userService.saveUser(newUser);
     }
+
+    //updates the user's status via searching their user id first
+    @PutMapping(value = "/user/update-status/{id}")
+    public User updateUser(@PathVariable Long id, @RequestBody String userStatus){
+        return userService.updateUserStatus(id, userStatus);
+    }
 }

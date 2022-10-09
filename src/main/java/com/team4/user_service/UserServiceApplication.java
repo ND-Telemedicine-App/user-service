@@ -30,6 +30,8 @@ public class UserServiceApplication implements CommandLineRunner {
 				"", "", "Feeling sick");
 		User newUser3 = new User(4L , "PATIENT", "junho@gmail.com", "password", "Go Junho", "assets/images/Junho.png", "224 Elizabeth Street", "0123456789", "Male", new Date(99, 12,30), "Peanut","Heart disease, diabetes level 2","Insulin, Paracetamol",
 				"", "", "Frequent headaches");
+		User newUser4 = new User(5L , "PATIENT", "luke@gmail.com", "password", "Luke Nguyen", "assets/images/patient.jpeg", "500 Elizabeth Street", "0123456789", "Male", new Date(99, 12,30), "Peanut","Heart disease, diabetes level 2","Insulin, Paracetamol",
+				"", "", "Frequent headaches");
 
 		BusyTime busyTime1 = new BusyTime(1L, 2L, "26-09-2022 10:30", 2);
 		BusyTime busyTime2 = new BusyTime(2L, 2L, "01-10-2022 12:11", 3);
@@ -44,6 +46,8 @@ public class UserServiceApplication implements CommandLineRunner {
 		userRepository.save(newUser3);
 		newUser1.setUserStatus("Online 2");
 		userRepository.save(newUser1);
+		userRepository.save(newUser4);
+
 
 		busyTimeRepository.save(busyTime1);
 		busyTimeRepository.save(busyTime2);

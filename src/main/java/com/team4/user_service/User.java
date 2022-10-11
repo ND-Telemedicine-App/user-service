@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(name = "users")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column
@@ -68,8 +68,6 @@ public class User {
 
     @Column
     private String userStatus;
-
-
 
     public Long getId() {
         return id;

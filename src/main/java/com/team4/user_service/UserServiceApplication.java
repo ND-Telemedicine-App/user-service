@@ -34,10 +34,10 @@ public class UserServiceApplication implements CommandLineRunner {
 		User admin = new User(5L , "ADMIN", "hsy@yahoo.com", "hsy1234", "Han Sooyoung", "assets/images/hansooyoung.jpg", "15 Collin St, Melbourne VIC 3000", "0412556668", "Female", new Date(96, Calendar.APRIL, 02), "","","",
 				"", "", "");
 
-		BusyTime busyTime1 = new BusyTime(1L, 2L, "26-10-2022 10:30", 2);
-		BusyTime busyTime2 = new BusyTime(2L, 2L, "08-10-2022 12:11", 1);
-		BusyTime busyTime3 = new BusyTime(3L, 2L, "29-10-2022 14:02", 1);
-		BusyTime busyTime4 = new BusyTime(4L, 2L, "28-10-2022 9:25", 2);
+		BusyTime busyTime1 = new BusyTime(1L, 1L, "11-10-2022 10:30", 2);
+		BusyTime busyTime2 = new BusyTime(2L, 1L, "12-10-2022 12:11", 1);
+		BusyTime busyTime3 = new BusyTime(3L, 1L, "13-10-2022 14:02", 1);
+		BusyTime busyTime4 = new BusyTime(4L, 1L, "14-10-2022 13:25", 2);
 
 		userRepository.save(doctor1);
 		userRepository.save(doctor2);

@@ -1,4 +1,4 @@
 FROM openjdk:11
-EXPOSE 9090
-ADD target/user-service-docker.jar user-service-docker.jar
+EXPOSE 8080
+COPY target/user-service-docker.jar user-service-docker.jar
 ENTRYPOINT ["java", "-jar", "/user-service-docker.jar"]
